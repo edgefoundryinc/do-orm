@@ -1,0 +1,38 @@
+{
+  "name": "@hammr/do-orm",
+  "version": "1.0.1",
+  "description": "Type-safe ORM for Cloudflare Durable Objects with zero runtime overhead",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsx test.ts",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test:worker": "tsx test-worker.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "cloudflare",
+    "durable-objects",
+    "orm",
+    "typescript",
+    "database",
+    "stateless"
+  ],
+  "author": "Edge Foundry, Inc.",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231218.0",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0",
+    "wrangler": "^3.78.0"
+  },
+  "peerDependencies": {
+    "@cloudflare/workers-types": ">=4.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
